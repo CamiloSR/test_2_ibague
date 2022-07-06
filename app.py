@@ -12,8 +12,15 @@ from dash.dependencies import Output, Input
 import dash_bootstrap_components as dbc
 import plotly.express as px
 
+
+## ----------------------------------------------------------------------------
+## ----------------------------------------------------------------------------
+## app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+## Start application
 app = dash.Dash(__name__)
 server = app.server
+
+
 
 PISAMI_LOGO = "https://pisami.ibague.gov.co/app/PISAMI/librerias/imagenes/index/logo_pisami_original.png"
 CORR_ONE_LOGO = "https://www.correlation-one.com/hubfs/c1logo_white.png"
@@ -188,5 +195,9 @@ def update_card(slct_rows_names):
         return val
 
 
-if __name__ == "__main__":
+## ----------------------------------------------------------------------------
+## ----------------------------------------------------------------------------
+## start server
+if __name__ == '__main__':
     app.run_server(debug=False)
+    #app.run_server(debug=False, port=8050)
